@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: avayaa-validation-dashboard
+    env: docker
+    plan: free
+    region: oregon
+    image:
+      url: ghcr.io/<YOUR_GITHUB_USERNAME>/avayaa-validation-dashboard:latest
+    envVars:
+      - key: NODE_ENV
+        value: production

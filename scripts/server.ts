@@ -18,7 +18,7 @@ import * as path from 'path';
 import { spawn, ChildProcess } from 'child_process';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 const ROOT = path.resolve(__dirname, '..');
 const CONFIG_PATH = path.join(ROOT, 'config/test-urls.json');
