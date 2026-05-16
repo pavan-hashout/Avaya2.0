@@ -3,12 +3,15 @@ name: Deploy to Render
 on:
   push:
     branches:
-      - main
+      - deploy
 
 jobs:
   deploy:
     name: Build, Push & Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
       - name: Checkout code
